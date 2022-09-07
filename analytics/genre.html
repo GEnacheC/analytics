@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Gênero', 'Quantidade'],
+          ['Dicionários',1],['Obras gerais de referência',1],['Metodologia',0],['Jornalismo',0],['Ciência da computação',4],['Filosofia',1],['Psicologia',3],['Religião',2],['Ciências sociais',0],['Meio ambiente',0],['Matemática',1],['Astronomia',0],['Física',0],['Química',2],['Biologia',0],['Engenharia',0],['Medicina',0],['Contabilidade',1],['Nutrição',0],['Inglês',0],['Administração',1],['Geografia',0],['Espanhol',0],['Literatura',0],['História',2],['Literatura americana',87],['Literatura inglesa',5],['Literatura alemã',4],['Literatura portuguesa',0],['Literatura espanhola',0],['Literatura francesa',1],['Literatura brasileira',22],['Literatura italiana',1],['Literatura chinesa',0],['Literatura russa',0],['Artes, entretenimento e esportes',0],['Literatura japonesa',0],['Teatro',0],['Poesia',1],['Livros em inglês, francês e espanhol',0],['Crônicas',12],['Revistas',0],['TCCs',0],['Cds',0],['Apostilas',1],['Livros didáticos',0],['Biografia',0],['Estatística',0],['Marketing',0],['Artes',0],['Automação',0],['Português',1],['Gramática',0],['Eletrônica',0],['Contos',0],['Ética',0],['Contabilidade',1],['Economia',0],['Sociologia',0],['Pedagogia',1],['Direito',0],['Informática',0],['Enciclopédia',0],['Comunicação',0]
+        ]);
+
+        var options = {
+          title: 'Gênero de livros mais vistos'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
